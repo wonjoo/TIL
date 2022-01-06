@@ -10,6 +10,8 @@
     - 폴더 경로가 잘못된 경우 오류 발생
     - **'subdirectory'** 경로 설정으로 오류 해결
 
+## 사전 설정
+- fastlane 명령어 생성 
 ## yml 작성
 ---
 ### push 발생 시 Trigger 발생
@@ -34,45 +36,21 @@ jobs:
 
 ### steps 설정
 순차적으로 어떤 동작을 할지 작성
-
-
-
-
-<!-- 
-    name: Swift
-
-on:
-  push:
-    branches: [ develop ]
-#   pull_request:
-#     branches: [ develop ]
-
-jobs:
-  build:
-    runs-on: macos-latest
-    strategy:
-      matrix:
-        ruby: [ 2.7]
-    
-
-    steps:
-    - name: Checkout
+~~~yml
+steps:
+    - name: Checkout #소스를 가상머신으로 받는다.
       uses: actions/checkout@v2
 
     - name: Install ruby
       uses: actions/setup-ruby@v1
       with:
-        ruby-version: ${{ matrix.ruby }}
-        
-    - name: List files in the repository
-      run: |
-          ls ${{ github.workspace }}
-    - run: echo "🍏 This job's status is ${{ job.status }}."
-    # - run: cd ColoringBook & pod install
+        ruby-version: ${{ matrix.ruby }} #matrix에 선언되어있는 루비 버전을 이용. "[2.7, 3.0]" 이런식으로 되어있으면 2번 빌드?
     - uses: maierj/fastlane-action@v2.0.1
       with:
-        lane: 'custom_lane'
-        subdirectory: 'ColoringBook' -->
+        lane: 'custom_lane' #fastlane에 정의해놓은 명령어 실행
+        subdirectory: 'subFolder' --> #fastlane 폴더가 하위에 정의되어 있으면 하위폴더 경로 정의
+~~~
+
 ## 참고자료
 
 - **fastlane 이용 가능한 Action**
