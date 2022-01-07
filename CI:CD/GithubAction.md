@@ -9,7 +9,7 @@
  2. fastlane 실행 폴더 경로 오류
     - 폴더 경로가 잘못된 경우 오류 발생
     - **'subdirectory'** 경로 설정으로 오류 해결
-    ![오류](https://github.com/wonjoo/TIL/blob/main/CI:CD/fastlane_error.png)
+    ![오류](https://github.com/wonjoo/TIL/blob/main/CI:CD/Resource/fastlane_error.png)
 
 ## 사전 설정
 - fastlane 명령어 생성 
