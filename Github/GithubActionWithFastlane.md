@@ -1,9 +1,5 @@
  # GithubActionWithFastlane
 
- ## 목차
- - [1. 사전설정](#사전-설정)
- - [2. 참고자료](#참고자료)
-
  ## 목표
  - push trigger 발생 시 fastlane 실행
  ## 오류
