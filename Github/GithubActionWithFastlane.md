@@ -1,4 +1,4 @@
- # GithubAction
+ # GithubActionWithFastlane
 
  ## 목표
  - push trigger 발생 시 fastlane 실행
