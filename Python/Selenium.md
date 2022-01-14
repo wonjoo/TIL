@@ -29,9 +29,12 @@ brew install chromedriver
 [ChromeDriverDownloadLink](https://chromedriver.chromium.org/downloads) 접속 Chrome버전에 맞는 드라이버 다운로드
 
 ### Google Login
-Google에서 Login에대해서 막아놓은 상황에서 이를 해결하기 위해 일부 기능 실행이 필요하다
+보안으로 인해 Login이 우횔 위해 selenium-stealth 설치
+~~~ruby
  pip3 install selenium-stealth
+~~~
  
+ stealth 기능 이용하여 가상환경 구성
  ~~~python
 from selenium_stealth import stealth
 
