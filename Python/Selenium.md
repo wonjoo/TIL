@@ -28,6 +28,25 @@ brew install chromedriver
 설정(cmd + ,) -> Chrome 정보 -> 버전정보 확인
 [ChromeDriverDownloadLink](https://chromedriver.chromium.org/downloads) 접속 Chrome버전에 맞는 드라이버 다운로드
 
+### Python ChromeDriver 예제
+~~~python
+
+import time
+from selenium import webdriver
+
+driver = webdriver.Chrome('/usr/local/bin/chromedriver')
+driver.get('http://www.google.com/')
+time.sleep(5)
+
+search_box = driver.find_element_by_name('q')
+search_box.send_keys('search something')
+search_box.submit()
+time.sleep(5)
+
+driver.quit()
+~~~
+
+
 ### Google Login
 Google에서 Login에대해서 막아놓은 상황에서 이를 해결하기 위해 일부 기능 실행이 필요하다
  pip3 install selenium-stealth
@@ -48,23 +67,4 @@ stealth(driver,
         )
  ~~~
 
-### Python 명령어 작성
-
-~~~python
-
-import time
-from selenium import webdriver
-
-driver = webdriver.Chrome('/usr/local/bin/chromedriver')
-driver.get('http://www.google.com/')
-time.sleep(5)
-
-search_box = driver.find_element_by_name('q')
-search_box.send_keys('search something')
-search_box.submit()
-time.sleep(5)
-
-driver.quit()
-
-~~~
 
