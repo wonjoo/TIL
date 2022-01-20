@@ -3,9 +3,7 @@
 ## 목표
 1. firebase app upload
 
-
 ## 작업
-
 Android 프로젝트의 루트에서 다음 명령어를 실행합니다.
 ~~~ruby
 fastlane add_plugin firebase_app_distribution
