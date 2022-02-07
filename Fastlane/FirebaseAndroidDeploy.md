@@ -32,3 +32,9 @@ desc "distribute to AppDistribution"
     )
   end
 ~~~
+
+
+## 참고
+https://soulduse.tistory.com/101
+
+
