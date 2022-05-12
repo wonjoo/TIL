@@ -1,5 +1,10 @@
 # Tuist
 
+
+## 기본 프로젝트 구조 설명
+Sources : Source 파일 저장 폴더
+Test : Test Class
+
 ## 기본 설치방법
 
 1. 설치
@@ -37,9 +42,9 @@
       1. Tuist 폴더안에 Dependencies.swift 생성
 
         ~~~Swift
-        import ProjectDescription
+         import ProjectDescription
 
-        let dependencies = Dependencies(carthage: [], swiftPackageManager: [.remote(url: "https://github.com/Alamofire/Alamofire.git", requirement: .upToNextMajor(from: "5.6.1"))], platforms: [.iOS])
+         let dependencies = Dependencies(carthage: [], swiftPackageManager: [.remote(url: "https://github.com/Alamofire/Alamofire.git", requirement: .upToNextMajor(from: "5.6.1"))], platforms: [.iOS])
         ~~~
 
       2. SPM Package 경로 추가
